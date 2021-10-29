@@ -1,9 +1,29 @@
 .items-section {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   flex-direction: column;
 
   img {
-    height: 200px;
-    width: 200px;
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .items-section {
+    flex-direction: row;
+
+    img {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .items-section {
+    img {
+      width: 80vw;
+    }
   }
 }
